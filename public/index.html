@@ -30,6 +30,14 @@
             console.log('Escuhando:', payload );
         });
 
+        socket.on('nuevo-mensaje', function( payload ){
+            console.log('Escuhando:', payload );  // consola del html
+        });                                       // la pagina cliente
+
+        socket.on('active-bands', function( bands ){
+            console.clear();
+            console.table(bands );  // consola del html
+        });   
 
     </script>
 </body>
